@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 명곡 TOP 3 - 지성이의 미니홈피</title>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,7 +17,7 @@
         <span class="heart h1">💔</span> <span class="cloud c3">☁️</span>
     </div>
 
-    <div class="side-widget">
+    <div class="side-widget" data-aos="flip-left" data-aos-delay="500">
         <h3>Today's Mood</h3>
         <div class="mood-icon">☔️</div> <ul class="status-list">
             <li><b>TODAY:</b> <span style="color:red">1</span> (나..)</li>
@@ -24,7 +27,7 @@
         <div class="sticker-tape"></div>
     </div>
     <div class="container">
-        <header>
+        <header data-aos="fade-down">
             <div class="title-box">
                 <h1>☁️ JISUNG'S PLAYLIST ☁️</h1>
                 <p class="subtitle">"나를 위로해준 플레이리스트..."</p>
@@ -32,7 +35,7 @@
         </header>
 
         <main>
-            <div class="song-card">
+            <div class="song-card" data-aos="fade-right">
                 <div class="image-wrapper">
                     <img src="img/photo1.jpeg" alt="딘딘 앨범 커버">
                     <div class="center-hole"></div>
@@ -63,7 +66,7 @@
                 </div>
             </div>
 
-            <div class="song-card">
+            <div class="song-card" data-aos="fade-left">
                 <div class="image-wrapper">
                     <img src="img/photo2.jpeg" alt="10CM 앨범 커버">
                     <div class="center-hole"></div>
@@ -95,7 +98,7 @@
                 </div>
             </div>
 
-            <div class="song-card">
+            <div class="song-card" data-aos="fade-up">
                 <div class="image-wrapper">
                     <img src="img/photo3.jpeg" alt="윤종신 앨범 커버">
                     <div class="center-hole"></div>
@@ -130,6 +133,7 @@
         <footer>
             <p>Copyright © 2025 Jisung's Emotional Diary.<br>
             All rights reserved.<br>
+            본 홈페이지는 Google GEMINI를 참고하여 제작됨.<br>
             </p>
         </footer>
                 <div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
@@ -155,6 +159,13 @@
         </div>
 
     </div>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // 애니메이션 재생 시간 (1.2초)
+            once: true,     // 한 번만 실행 (스크롤 다시 올려도 깜빡임 방지)
+            offset: 200     // 200px 정도 스크롤 되면 실행
+        });
+    </script>
 </body>
 </html>
