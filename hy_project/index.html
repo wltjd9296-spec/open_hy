@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 명곡 TOP 3 - 지성이의 미니홈피</title>
+
+    <!-- Google Fonts Preconnect 추가 (팀장 요청사항 3번) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-
-
 </head>
+
 <body>
     <div class="floating-bg">
         <span class="cloud c1">☁️</span>
@@ -19,13 +23,15 @@
 
     <div class="side-widget" data-aos="flip-left" data-aos-delay="500">
         <h3>Today's Mood</h3>
-        <div class="mood-icon">☔️</div> <ul class="status-list">
-            <li><b>TODAY:</b> <span style="color:red">1</span> (나..)</li>
+        <div class="mood-icon">☔️</div> 
+        <ul class="status-list">
+            <li><b>TODAY:</b> <span class="today-red">1</span> (나..)</li>
             <li><b>TOTAL:</b> 1004</li>
             <li><b>STATE:</b> 짝사랑 중..</li>
         </ul>
         <div class="sticker-tape"></div>
     </div>
+
     <div class="container">
         <header data-aos="fade-down">
             <div class="title-box">
@@ -35,23 +41,26 @@
         </header>
 
         <main>
+            <!-- SONG CARD 1 -->
             <div class="song-card" data-aos="fade-right">
                 <div class="image-wrapper">
                     <img src="img/photo1.jpeg" alt="딘딘 앨범 커버">
                     <div class="center-hole"></div>
                     <span class="rank-badge">PICK 1</span>
                 </div>
+
                 <div class="song-content">
                     <div class="song-header">
                         <h2>이러면 안 될 거 아는데 너 앞에만 서면 나락</h2>
                         <p class="artist">Feat. 10CM - 딘딘 (DINDIN)</p>
                     </div>
-                    
+
                     <div class="behind-story">
                         <h3>✏️ 나의 일기</h3>
-                        <p class="placeholder-text">가사가 진짜 나의 마음 같아서 매번 들을 때마다 울컥하는 노래...<br>
-                        "이제 진짜 그만 좋아해야지" 다짐하고 잠들어도<br>
-                        막상 그 사람 얼굴 보면 바로 무장해제되는 내가 너무 싫다...<br>
+                        <p class="placeholder-text">
+                            가사가 진짜 나의 마음 같아서 매번 들을 때마다 울컥하는 노래...<br>
+                            "이제 진짜 그만 좋아해야지" 다짐하고 잠들어도<br>
+                            막상 그 사람 얼굴 보면 바로 무장해제되는 내가 너무 싫다...<br>
                         </p>
                     </div>
 
@@ -66,12 +75,14 @@
                 </div>
             </div>
 
+            <!-- SONG CARD 2 -->
             <div class="song-card" data-aos="fade-left">
                 <div class="image-wrapper">
                     <img src="img/photo2.jpeg" alt="10CM 앨범 커버">
                     <div class="center-hole"></div>
                     <span class="rank-badge">PICK 2</span>
                 </div>
+
                 <div class="song-content">
                     <div class="song-header">
                         <h2>부동의 첫사랑</h2>
@@ -80,10 +91,11 @@
 
                     <div class="behind-story">
                         <h3>✏️ 나의 일기</h3>
-                        <p class="placeholder-text">하... 이 형님들은 왜 자꾸 허락도 없이 내 얘기를 노래로 쓰는 거야...<br>
-                        '주인공은 아니었지', '친구3이라거나' 등등<br>
-                        가사 하나하나가 뼈를 때리다 못해 순살됨...<br>
-                        그래서 나 혼자 북치고 장구치는 짝사랑 시즌 오면 무조건 무한반복함...<br>
+                        <p class="placeholder-text">
+                            하... 이 형님들은 왜 자꾸 허락도 없이 내 얘기를 노래로 쓰는 거야...<br>
+                            '주인공은 아니었지', '친구3이라거나' 등등<br>
+                            가사 하나하나가 뼈를 때리다 못해 순살됨...<br>
+                            그래서 나 혼자 북치고 장구치는 짝사랑 시즌 오면 무조건 무한반복함...<br>
                         </p>
                     </div>
 
@@ -98,12 +110,14 @@
                 </div>
             </div>
 
+            <!-- SONG CARD 3 -->
             <div class="song-card" data-aos="fade-up">
                 <div class="image-wrapper">
                     <img src="img/photo3.jpeg" alt="윤종신 앨범 커버">
                     <div class="center-hole"></div>
                     <span class="rank-badge">PICK 3</span>
                 </div>
+
                 <div class="song-content">
                     <div class="song-header">
                         <h2>고속도로 로망스</h2>
@@ -112,9 +126,10 @@
 
                     <div class="behind-story">
                         <h3>✏️ 나의 일기</h3>
-                        <p class="placeholder-text">눈 감고 이 노래 들으면 당장이라도 오픈카타고 바다로 가는 기분임.<br>
-                        비록 지금은 혼자 방구석이지만...<br>
-                        언젠가는 꼭 그녀와 함께 여행을 떠나는 상상을 하며 듣는ㄷr...<br>
+                        <p class="placeholder-text">
+                            눈 감고 이 노래 들으면 당장이라도 오픈카타고 바다로 가는 기분임.<br>
+                            비록 지금은 혼자 방구석이지만...<br>
+                            언젠가는 꼭 그녀와 함께 여행을 떠나는 상상을 하며 듣는ㄷr...<br>
                         </p>
                     </div>
 
@@ -131,12 +146,14 @@
         </main>
 
         <footer>
-            <p>Copyright © 2025 Jisung's Emotional Diary.<br>
-            All rights reserved.<br>
-            본 홈페이지는 Google GEMINI를 참고하여 제작됨.<br>
+            <p>
+                Copyright © 2025 Jisung's Emotional Diary.<br>
+                All rights reserved.<br>
+                본 홈페이지는 Google GEMINI를 참고하여 제작됨.<br>
             </p>
         </footer>
-                <div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
+
+        <div class="secret-container">
             <a href="#" id="secret-trigger" class="secret-btn">🚫 절대 누르지 마시오</a>
         </div>
 
@@ -145,11 +162,9 @@
                 <h2>🤫 들켰다!</h2>
                 <p>
                     여기까지 누르시다니 호기심이 대단하시군요.<br>
-                    사실 이 홈페이지는 과제용이기도 하지만...<br>
-                    <br>
+                    사실 이 홈페이지는 과제용이기도 하지만...<br><br>
                     <strong style="color:red;">"미래의 여자친구"</strong>를 위한<br>
-                    공개 구혼장이기도 합니다.<br>
-                    <br>
+                    공개 구혼장이기도 합니다.<br><br>
                     연락 기다립니다..<br>
                     전번 010-XXXX-XXXX<br>
                     이메일 qwerXXXX@hanyang.ac.kr<br>
@@ -157,28 +172,26 @@
                 <a href="#" class="close-btn">닫기 (모른 척 하기)</a>
             </div>
         </div>
-
     </div>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1200, // 애니메이션 재생 시간 (1.2초)
-            once: true,     // 한 번만 실행 (스크롤 다시 올려도 깜빡임 방지)
-            offset: 200     // 200px 정도 스크롤 되면 실행
+            duration: 1200,
+            once: true,
+            offset: 200
         });
     </script>
 
     <script>
         document.getElementById('secret-trigger').addEventListener('click', function(event) {
-            event.preventDefault(); // 기본 앵커 이동 동작 막기
+            event.preventDefault();
 
             const isConfirmed = confirm('경고: 이 페이지는 짝사랑 일기가 포함되어 있어 매우 위험합니다. 그래도 확인하시겠습니까?');
-            
+
             if (isConfirmed) {
-                // 사용자가 확인을 누르면, CSS의 :target 기능을 이용해 팝업을 띄웁니다.
                 window.location.hash = 'secret-room';
             } else {
-                // 취소를 누르면 팝업이 닫힙니다 (혹시 열려있었다면).
                 window.location.hash = ''; 
             }
         });
