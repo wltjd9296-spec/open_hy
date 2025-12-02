@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 명곡 TOP 3 - 지성이의 미니홈피</title>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"
-    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -137,7 +135,7 @@
             </p>
         </footer>
                 <div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
-            <a href="#secret-room" class="secret-btn">🚫 절대 누르지 마시오</a>
+            <a href="#" id="secret-trigger" class="secret-btn">🚫 절대 누르지 마시오</a>
         </div>
 
         <div id="secret-room" class="overlay">
@@ -165,6 +163,22 @@
             duration: 1200, // 애니메이션 재생 시간 (1.2초)
             once: true,     // 한 번만 실행 (스크롤 다시 올려도 깜빡임 방지)
             offset: 200     // 200px 정도 스크롤 되면 실행
+        });
+    </script>
+
+    <script>
+        document.getElementById('secret-trigger').addEventListener('click', function(event) {
+            event.preventDefault(); // 기본 앵커 이동 동작 막기
+
+            const isConfirmed = confirm('경고: 이 페이지는 짝사랑 일기가 포함되어 있어 매우 위험합니다. 그래도 확인하시겠습니까?');
+            
+            if (isConfirmed) {
+                // 사용자가 확인을 누르면, CSS의 :target 기능을 이용해 팝업을 띄웁니다.
+                window.location.hash = 'secret-room';
+            } else {
+                // 취소를 누르면 팝업이 닫힙니다 (혹시 열려있었다면).
+                window.location.hash = ''; 
+            }
         });
     </script>
 </body>
