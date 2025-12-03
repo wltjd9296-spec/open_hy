@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,20 +13,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 
 <body>
+
     <div class="floating-bg">
         <span class="cloud c1">☁️</span>
         <span class="cloud c2">☁️</span>
-        <span class="heart h1">💔</span> <span class="cloud c3">☁️</span>
+        <span class="heart h1">💔</span>
+        <span class="cloud c3">☁️</span>
     </div>
 
     <div class="side-widget" data-aos="flip-left" data-aos-delay="500">
         <h3>Today's Mood</h3>
-        <div class="mood-icon">☔️</div> 
+        <div class="mood-icon">☔️</div>
         <ul class="status-list">
-            <li><b>TODAY:</b> <span class="today-red">1</span> (나..)</li>
+            <li><b>TODAY:</b> <span style="color:red">1</span> (나..)</li>
             <li><b>TOTAL:</b> 1004</li>
             <li><b>STATE:</b> 짝사랑 중..</li>
         </ul>
@@ -144,6 +150,8 @@
                 </div>
             </div>
         </main>
+        <!-- ⭐ 여기서부터 노래 카드가 script로 자동 생성됨 -->
+        <main id="song-list"></main>
 
         <footer>
             <p>
@@ -154,6 +162,7 @@
         </footer>
 
         <div class="secret-container">
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
             <a href="#" id="secret-trigger" class="secret-btn">🚫 절대 누르지 마시오</a>
         </div>
 
@@ -174,7 +183,9 @@
         </div>
     </div>
 
+    <!-- AOS 라이브러리 -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
         AOS.init({
             duration: 1200,
@@ -183,18 +194,106 @@
         });
     </script>
 
+    <!-- ⭐ 동적 렌더링 JS (songs 배열 + forEach) -->
     <script>
         document.getElementById('secret-trigger').addEventListener('click', function(event) {
             event.preventDefault();
+        const songs = [
+            {
+                rank: "PICK 1",
+                title: "이러면 안 될 거 아는데 너 앞에만 서면 나락",
+                artist: "Feat. 10CM - 딘딘 (DINDIN)",
+                image: "img/photo1.jpeg",
+                story: `가사가 진짜 나의 마음 같아서 매번 들을 때마다 울컥하는 노래...
+"이제 진짜 그만 좋아해야지" 다짐하고 잠들어도
+막상 그 사람 얼굴 보면 바로 무장해제되는 내가 너무 싫다...`,
+                youtube: "https://www.youtube.com/watch?v=fgAY7BJSKsg&list=RDfgAY7BJSKsg&start_radio=1"
+            },
+            {
+                rank: "PICK 2",
+                title: "부동의 첫사랑",
+                artist: "10CM",
+                image: "img/photo2.jpeg",
+                story: `하... 이 형님들은 왜 자꾸 허락도 없이 내 얘기를 노래로 쓰는 거야...
+'주인공은 아니었지', '친구3이라거나' 등등
+가사 하나하나가 뼈를 때리다 못해 순살됨...
+그래서 나 혼자 북치고 장구치는 짝사랑 시즌 오면 무조건 무한반복함...`,
+                youtube: "https://www.youtube.com/watch?v=6iZyquKcpzg&list=RD6iZyquKcpzg&start_radio=1"
+            },
+            {
+                rank: "PICK 3",
+                title: "고속도로 로망스",
+                artist: "윤종신",
+                image: "img/photo3.jpeg",
+                story: `눈 감고 이 노래 들으면 당장이라도 오픈카 타고 바다로 가는 기분임.
+비록 지금은 혼자 방구석이지만...
+언젠가는 꼭 그녀와 함께 여행을 떠나는 상상을 하며 듣는ㄷr...`,
+                youtube: "https://www.youtube.com/watch?v=bzq61UADT3M&list=RDbzq61UADT3M&start_radio=1"
+            }
+        ];
 
+        const songList = document.getElementById("song-list");
+
+        songs.forEach((song, index) => {
+            const animation =
+                index === 0 ? "fade-right" :
+                    index === 1 ? "fade-left" :
+                        "fade-up";
+
+            const card = `
+                <div class="song-card" data-aos="${animation}">
+                    <div class="image-wrapper">
+                        <img src="${song.image}" alt="${song.title}">
+                        <div class="center-hole"></div>
+                        <span class="rank-badge">${song.rank}</span>
+                    </div>
+
+                    <div class="song-content">
+                        <div class="song-header">
+                            <h2>${song.title}</h2>
+                            <p class="artist">${song.artist}</p>
+                        </div>
+
+                        <div class="behind-story">
+                            <h3>✏️ 나의 일기</h3>
+                            <p class="placeholder-text">
+                                ${song.story.replace(/\n/g, "<br>")}
+                            </p>
+                        </div>
+
+                        <div class="action-area">
+                            <a href="${song.youtube}" target="_blank" class="play-btn">
+                                <div class="equalizer">
+                                    <span></span><span></span><span></span><span></span>
+                                </div>
+                                <span>공감 하기</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            songList.insertAdjacentHTML("beforeend", card);
+        });
+    </script>
+
+    <script>
+        document.getElementById('secret-trigger').addEventListener('click', function (event) {
+            event.preventDefault();
             const isConfirmed = confirm('경고: 이 페이지는 짝사랑 일기가 포함되어 있어 매우 위험합니다. 그래도 확인하시겠습니까?');
 
             if (isConfirmed) {
                 window.location.hash = 'secret-room';
             } else {
                 window.location.hash = ''; 
+            if (isConfirmed) {
+                window.location.hash = 'secret-room';
+            } else {
+                window.location.hash = '';
             }
         });
     </script>
+
 </body>
+
 </html>
