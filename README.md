@@ -133,9 +133,35 @@ AOS 오픈소스 라이브러리 적용 가이드
 프로젝트 초기 설정 및 레포지토리 구조화
 #1 closed 2 days ago
 
- 1 issue opened by 1 person
+ 10 issues closed by 1 person
 GitHub Page 배포 및 최종 점검
-#7 opened 
+#7 closed 23 minutes ago
 
+README.md 작성 (프로젝트 소개 및 기여 내역)
+#12 closed 33 minutes ago
+
+유튜브 플레이어 모달(Modal) 기능 구현
+#11 closed 2 hours ago
+
+탭 메뉴 인터랙션 JavaScript 구현
+#10 closed yesterday
+
+공통 스타일 가이드 정립 및 CSS 분리
+#2 closed 2 days ago
+
+앨범 커버 및 플레이리스트 데이터 JSON 분리
+#6 closed 2 days ago
+
+모바일 반응형 UI 디테일 수정 (Media Query)
+#4 closed 2 days ago
+
+'비밀의 방' 이스터에그 로직 고도화
+#5 closed 2 days ago
+
+AOS 오픈소스 라이브러리 적용 가이드
+#3 closed 2 days ago
+
+프로젝트 초기 설정 및 레포지토리 구조화
+#1 closed 2 days ago
 
 **참고** *이아름님이 맡으신 이슈 세 가지에서, 코드를 작성하는 데는 성공적으로 마치었으나 커밋 및 푸시 작업에 치명적인 문제가 생겨 프로젝트 총괄 겸 팀장인 이지성이 대신 협의하에 제출하였음을 소명함.*
