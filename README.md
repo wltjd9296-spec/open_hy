@@ -3,6 +3,10 @@
 본 프로젝트는 팀장의 개인적인 감정을 담은 플레이리스트를 웹페이지 형태로 기록하며 페이지 이탈 없이 유튜브 영상을 팝업의 형태로 재생할 수 있도록 구현한 반응형 웹입니다.
 
 ## 필수 배지 코드
+![HTML5](https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![GitHub](https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white)
 
 
 ### 주요 기능
