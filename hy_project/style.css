@@ -665,3 +665,56 @@ body {
         transform: translateY(0); /* 제자리로 */
     }
 }
+/* 유튜브 플레이어 모달 스타일 */
+
+/* 1. 모달 배경 (전체 화면 덮음) */
+.modal {
+    display: none; /* 초기에는 숨김 상태 */
+    position: fixed; 
+    z-index: 2000; /* 매우 높은 z-index로 최상단에 표시 */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.85); /* 어두운 투명 배경 */
+    backdrop-filter: blur(5px); /* 배경 블러 효과 (선택 사항) */
+}
+
+/* 2. 모달 컨텐츠 영역 (영상과 닫기 버튼이 들어가는 흰색 박스) */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 8% auto; /* 상하 여백, 좌우 자동 (수평 가운데 정렬) */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; 
+    max-width: 900px; /* 최대 폭 지정 */
+    box-shadow: 0 5px 25px rgba(255, 255, 255, 0.4);
+}
+
+/* 3. 닫기 버튼 (X) */
+.close-btn {
+    color: #888;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 20px;
+    margin-top: -10px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+/* 4. YouTube Player 반응형 설정 */
+/* #player 컨테이너가 16:9 비율을 유지하도록 설정 */
+#player {
+    aspect-ratio: 16 / 9; /* 가로 세로 비율 16:9 유지 */
+    width: 100%;
+    height: auto; /* 비율 유지를 위해 높이는 자동으로 설정 */
+    margin-top: 15px;
+}
