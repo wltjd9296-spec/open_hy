@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JISUNG'S PLAYLIST</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"> 
+</head>
+<body>
+    <div class="floating-bg"><span class="cloud c1">☁️</span><span class="cloud c2">☁️</span><span class="heart h1">💔</span><span class="cloud c3">☁️</span></div>
+    <div class="side-widget" data-aos="flip-left" data-aos-delay="500">
+        <h3>Today's Mood</h3><div class="mood-icon">☔️</div>
+        <ul class="status-list"><li><b>TODAY:</b> <span style="color:red">1</span></li><li><b>STATE:</b> 짝사랑 중..</li></ul>
+        <div class="sticker-tape"></div>
+    </div>
+
+    <div class="container">
+        <header data-aos="fade-down">
+            <div class="title-box"><h1>☁️ JISUNG'S PLAYLIST ☁️</h1><p class="subtitle">"나를 위로해준 플레이리스트..."</p></div>
+        </header>
+
+        <ul class="tab-menu">
+            <li class="tab-item"><a href="index.html" class="tab-link active">Playlist</a></li>
+            <li class="tab-item"><a href="diary.html" class="tab-link">Diary</a></li>
+            <li class="tab-item"><a href="profile.html" class="tab-link">Profile</a></li>
+        </ul>
+
+        <main>
+            <div id="song-list-container"></div>
+        </main>
+        <!-- ⭐ 여기서부터 노래 카드가 script로 자동 생성됨 -->
+        <main id="song-list"></main>
+
+        <footer>
+            <p>
+                Copyright © 2025 Jisung's Emotional Diary.<br>
+                All rights reserved.<br>
+                본 홈페이지는 Google GEMINI를 참고하여 제작됨.<br>
+            </p>
+        </footer>
+
+        <div class="secret-container">
+            <div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
+                <a href="#" id="secret-trigger" class="secret-btn">🚫 절대 누르지 마시오</a>
+            </div>
+            <div id="secret-room" class="overlay">
+                <div class="popup">
+                    <h2>🤫 들켰다!</h2>
+                    <p>
+                        여기까지 누르시다니 호기심이 대단하시군요.<br>
+                        사실 이 홈페이지는 과제용이기도 하지만...<br><br>
+                        <strong style="color:red;">"미래의 여자친구"</strong>를 위한<br>
+                        공개 구혼장이기도 합니다.<br><br>
+                        연락 기다립니다..<br>
+                        전번 010-XXXX-XXXX<br>
+                        이메일 qwerXXXX@hanyang.ac.kr<br>
+                    </p>
+                    <a href="#" class="close-btn" onclick="window.location.hash=''; return false;">닫기 (모른 척 하기)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="youtube-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <div id="player"></div> 
+            </div>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true, offset: 200 });
+
+        // 노래 데이터 (줄바꿈 포함)
+        const songs = [
+            {
+                rank: "PICK 1",
+                title: "이러면 안 될 거 아는데 네 앞에만 서면 나락",
+                artist: "Feat. 10CM - 딘딘 (DINDIN)",
+                image: "photo1.jpeg", // 파일 위치 주의 (같은 폴더면 photo1.jpeg, 아니면 img/photo1.jpeg)
+                story: `가사가 진짜 나의 마음 같아서 매번 들을 때마다 울컥하는 노래...
+"이제 진짜 그만 좋아해야지" 다짐하고 잠들어도
+막상 그 사람 얼굴 보면 바로 무장해제되는 내가 너무 싫다...`,
+                youtube: "https://www.youtube.com/watch?v=fgAY7BJSKsg"
+            },
+            {
+                rank: "PICK 2",
+                title: "부동의 첫사랑",
+                artist: "10CM",
+                image: "photo2.jpeg",
+                story: `하... 이 형님들은 왜 자꾸 허락도 없이 내 얘기를 노래로 쓰는 거야...
+'주인공은 아니었지', '친구3이라거나' 등등
+가사 하나하나가 뼈를 때리다 못해 순살됨...
+그래서 나 혼자 북치고 장구치는 짝사랑 시즌 오면 무조건 무한반복함...`,
+                youtube: "https://www.youtube.com/watch?v=6iZyquKcpzg"
+            },
+            {
+            rank: "PICK 3",
+            title: "아직 좋아해(Even Now)",
+            artist: "양요셥",
+            image: "photo3.jpg",
+            // ⭐ 이 부분이 수정되었습니다! story 문자열을 백틱으로 정확히 닫고, youtube 속성을 분리했습니다.
+            story: `우ㄹlㄱr 헤어진 건 ㄷr ㄴrl 오만이었어...
+너 없이 살 수 있을 거라는 ㄴrl 오만...`,
+            youtube: "https://www.youtube.com/watch?v=LiN-pBqbYHs&list=RDLiN-pBqbYHs&start_radio=1"
+            }
+        ];
+
+        // 노래 카드 생성 로직
+        const songContainer = document.getElementById("song-list-container");
+        songs.forEach((song, index) => {
+            const animation = index === 0 ? "fade-right" : index === 1 ? "fade-left" : "fade-up";
+            
+            songContainer.insertAdjacentHTML("beforeend", `
+                <div class="song-card" data-aos="${animation}">
+                    <div class="image-wrapper">
+                        <img src="${song.image}" alt="${song.title}">
+                        <div class="center-hole"></div>
+                        <span class="rank-badge">${song.rank}</span>
+                    </div>
+                    <div class="song-content">
+                        <div class="song-header">
+                            <h2>${song.title}</h2>
+                            <p class="artist">${song.artist}</p>
+                        </div>
+                        <div class="behind-story">
+                            <h3>✏️ 나의 일기</h3>
+                            <p class="placeholder-text">${song.story.replace(/\n/g, "<br>")}</p>
+                        </div>
+                        <div class="action-area">
+                            <a href="#" data-youtube-url="${song.youtube}" class="play-btn open-modal-btn">
+                                <div class="equalizer"><span></span><span></span><span></span><span></span></div>
+                                <span>공감 하기</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>`);
+        });
+
+        // ⭐ [복구 완료] 비밀의 방 스크립트
+        document.getElementById('secret-trigger').addEventListener('click', function(event) {
+            event.preventDefault();
+            const isConfirmed = confirm('경고: 이 페이지는 짝사랑 일기가 포함되어 있어 매우 위험합니다. 그래도 확인하시겠습니까?');
+
+            if (isConfirmed) {
+                window.location.hash = 'secret-room'; // CSS :target 발동
+            }
+        });
+        // =============================================================
+        // ⭐ [유튜브 모달/플레이어 관련 JS 로직 추가]
+        // =============================================================
+
+        let player; // YT Player 객체를 저장할 전역 변수
+
+        // 1. YouTube URL에서 11자리 Video ID를 추출하는 함수
+        function getVideoId(url) {
+            const regex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|watch\?.*v=|embed\/|v\/)|youtu\.be\/)([^"&?\/\s]{11})/;
+            const match = url.match(regex);
+            return match ? match[1] : null;
+        }
+
+        // 2. IFrame API가 로드되면 호출되는 필수 함수
+        function onYouTubeIframeAPIReady() {
+            // 초기에는 플레이어를 생성하지 않고, 버튼 클릭 시 생성/로드합니다.
+        }
+
+        const modal = document.getElementById('youtube-modal');
+        const closeModalBtn = modal.querySelector('.close-btn');
+        const openModalBtns = document.querySelectorAll('.open-modal-btn');
+
+        // 3. 비디오 중지 및 모달 숨기기 함수
+        function hideModal() {
+            modal.style.display = 'none';
+            if (player && typeof player.stopVideo === 'function') {
+                player.stopVideo(); // 영상을 닫을 때 재생 중지
+            }
+        }
+
+        // 4. '공감 하기' 버튼 클릭 이벤트 리스너 설정
+        openModalBtns.forEach(btn => {
+            btn.addEventListener('click', function(event) {
+                event.preventDefault(); // 기본 링크 이동 방지
+                
+                const youtubeUrl = this.getAttribute('data-youtube-url');
+                const videoId = getVideoId(youtubeUrl);
+
+                console.log("추출된 영상 ID:", videoId);
+
+                if (!videoId) {
+                    console.error("유효하지 않은 유튜브 URL:", youtubeUrl);
+                    return;
+                }
+
+                modal.style.display = 'block'; // 모달 표시
+
+                // 플레이어가 없으면 새로 생성
+                if (!player) {
+                    player = new YT.Player('player', {
+                        height: '390', 
+                        width: '640',  
+                        videoId: videoId,
+                        playerVars: {
+                            'autoplay': 1, // 자동 재생
+                            'modestbranding': 1, // 유튜브 로고 숨김
+                            'rel': 0, // 관련 동영상 표시 안 함
+                        },
+                        // onReady: (event) => { event.target.playVideo(); } // Ready 시점 자동재생 보장
+                    });
+                } else {
+                    // 플레이어가 이미 있으면 새 영상 로드 및 재생
+                    player.loadVideoById(videoId);
+                }
+            });
+        });
+
+        // 5. 모달 닫기 버튼(X) 이벤트
+        closeModalBtn.addEventListener('click', hideModal);
+
+        // 6. 모달 바깥 영역 클릭 시 닫기 이벤트
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                hideModal();
+            }
+        });
+
+        // 7. ESC 키 입력 시 닫기 이벤트
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                hideModal();
+            }
+        });
+    </script>
+</body>
+</html>
