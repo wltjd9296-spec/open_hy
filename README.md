@@ -105,35 +105,7 @@ feat: '비밀의 방' JavaScript 인터랙션 추가
 [Setting] 프로젝트 초기 구조 설정 #1
 #8 merged 2 days ago
 
- 9 issues closed by 1 person
-README.md 작성 (프로젝트 소개 및 기여 내역)
-#12 closed 3 minutes ago
-
-유튜브 플레이어 모달(Modal) 기능 구현
-#11 closed 1 hour ago
-
-탭 메뉴 인터랙션 JavaScript 구현
-#10 closed yesterday
-
-공통 스타일 가이드 정립 및 CSS 분리
-#2 closed 2 days ago
-
-앨범 커버 및 플레이리스트 데이터 JSON 분리
-#6 closed 2 days ago
-
-모바일 반응형 UI 디테일 수정 (Media Query)
-#4 closed 2 days ago
-
-'비밀의 방' 이스터에그 로직 고도화
-#5 closed 2 days ago
-
-AOS 오픈소스 라이브러리 적용 가이드
-#3 closed 2 days ago
-
-프로젝트 초기 설정 및 레포지토리 구조화
-#1 closed 2 days ago
-
- 10 issues closed by 1 person
+10 issues closed by 1 person
 GitHub Page 배포 및 최종 점검
 #7 closed 23 minutes ago
 
