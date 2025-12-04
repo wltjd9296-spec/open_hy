@@ -47,4 +47,4 @@
 ### 프로젝트 실행 방법
 1. **로컬 환경**: 프로젝트 파일을 다운로드한 후 VS Code의 Live Server 등으로 HTML 파일을 실행.
 2. **배포 환경**: 아래 GitHub Pages URL로 접속하여 확인.
-   ***URL**: *
+   ***URL**: https://wltjd9296-spec.github.io/open_hy/*
