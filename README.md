@@ -62,31 +62,31 @@ docs: 팀원 프로필 추가 및 마크다운 문서 재작성/수정
 docs: 팀원 프로필 추가 및 사진 추가
 #28 merged 3 days ago
 
-최종 유효성 검사 후 오류 수정
+Fix: 최종 유효성 검사 후 오류 수정
 #27 merged 3 days ago
 
-오류 수정(최상위 폴더로 파일 이동)
+Refactor: 오류 수정(최상위 폴더로 파일 이동)
 #26 merged 3 days ago
 
-파일 구조 변경
+Refactor: 파일 구조 변경 및 오류 수정
 #25 merged 3 days ago
 
-feat: Add YouTube player modal functionality
+Feat: Add YouTube player modal functionality
 #24 merged 3 days ago
 
-세번째 곡 수정(짝사랑, 연애, 이별 메커니즘 구상)
+Fix: 세번째 곡 수정(짝사랑, 연애, 이별 메커니즘 구상)
 #23 merged 3 days ago
 
-제목 수정
+Fix: 제목 수정
 #22 merged 4 days ago
 
-feat: 탭 메뉴 구현 및 HTML 구조/스크립트 오류 수정 (Issue #10)
+Feat: 탭 메뉴 구현 및 HTML 구조/스크립트 오류 수정 (Issue #10)
 #21 merged 4 days ago
 
-feat: 탭 메뉴 구현 및 HTML 구조/스크립트 오류 수정 (Issue #10)
+Feat: 탭 메뉴 구현 및 HTML 구조/스크립트 오류 수정 (Issue #10)
 #20 merged 4 days ago
 
-공통 스타일 가이드 정립 및 css 분리 s
+Feat: 공통 스타일 가이드 정립 및 css 분리 s
 #17 merged 4 days ago
 
 Feat: 앨범 커버 및 플레이리스트 데이터 JSON 분리, 동적 렌더링 적용 (#6)
@@ -95,25 +95,25 @@ Feat: 앨범 커버 및 플레이리스트 데이터 JSON 분리, 동적 렌더�
 Fix: 모바일 반응형 UI 디테일 수정
 #19 merged 4 days ago
 
-오류 재수정
+Fix: 오류 재수정
 #16 merged 5 days ago
 
-오류 수정
+Fix: 오류 수정
 #15 merged 5 days ago
 
-feat: '비밀의 방' JavaScript 인터랙션 추가
+Feat: '비밀의 방' JavaScript 인터랙션 추가
 #14 merged 5 days ago
 
-[Feat] 오픈소스 AOS 라이브러리를 활용한 UI 동적 구현 #3
+Feat: 오픈소스 AOS 라이브러리를 활용한 UI 동적 구현 #3
 #13 merged 5 days ago
 
-[Fix] 프로젝트 설정 파일 누락 수정
+Fix: 프로젝트 설정 파일 누락 수정
 #9 merged 5 days ago
 
-[Setting] 프로젝트 초기 구조 설정 #1
+Setting: 프로젝트 초기 구조 설정 #1
 #8 merged 5 days ago
 
- 10 issues closed by 1 person
+ 10 issues closed by 1 person(팀장이 대표로 Merge한 후 Closed까지 진행하였음.)
 GitHub Page 배포 및 최종 점검
 #7 closed 3 days ago
 
@@ -157,3 +157,96 @@ Pair Programming 도입: 프로젝트 막바지, 유튜브 API 연동 로직의 
 
 ### 📑 이아름 (Feature & Docs)
 오픈소스 라이브러리(AOS)를 처음 적용해 보며 공식 문서의 중요성을 깨달았다. 개발 과정에서 Git 충돌 문제로 어려움이 있었지만 팀장과의 페어 프로그래밍을 통해 협업 워크플로우를 익히고 문제를 해결하는 값진 경험을 했다.
+
+### 라이센스
+Copyright (c) 2025 wltjd9296-spec
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+### .gitignore
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
+node_modules/
+dist/
+# Created by https://www.toptal.com/developers/gitignore/api/java,c++
+# Edit at https://www.toptal.com/developers/gitignore?templates=java,c++
+
+### C++ ###
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+### Java ###
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+# End of https://www.toptal.com/developers/gitignore/api/java,c++
