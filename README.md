@@ -53,88 +53,96 @@
 2. **배포 환경**: 아래 GitHub Pages URL로 접속하여 확인.
    ***URL**: https://wltjd9296-spec.github.io/open_hy/*
 
-17 pull requests merged by 2 people
+### Pull/Push Summary
+
+ 19 pull requests merged by 2 people
+docs: 팀원 프로필 추가 및 마크다운 문서 재작성/수정
+#29 merged 1 minute ago
+
+docs: 팀원 프로필 추가 및 사진 추가
+#28 merged 3 days ago
+
 최종 유효성 검사 후 오류 수정
-#27 merged 1 minute ago
+#27 merged 3 days ago
 
 오류 수정(최상위 폴더로 파일 이동)
-#26 merged 26 minutes ago
+#26 merged 3 days ago
 
 파일 구조 변경
-#25 merged 33 minutes ago
+#25 merged 3 days ago
 
 feat: Add YouTube player modal functionality
-#24 merged 1 hour ago
+#24 merged 3 days ago
 
 세번째 곡 수정(짝사랑, 연애, 이별 메커니즘 구상)
-#23 merged 3 hours ago
+#23 merged 3 days ago
 
 제목 수정
-#22 merged yesterday
+#22 merged 4 days ago
 
 feat: 탭 메뉴 구현 및 HTML 구조/스크립트 오류 수정 (Issue #10)
-#21 merged yesterday
+#21 merged 4 days ago
 
 feat: 탭 메뉴 구현 및 HTML 구조/스크립트 오류 수정 (Issue #10)
-#20 merged yesterday
+#20 merged 4 days ago
 
 공통 스타일 가이드 정립 및 css 분리 s
-#17 merged 2 days ago
+#17 merged 4 days ago
 
 Feat: 앨범 커버 및 플레이리스트 데이터 JSON 분리, 동적 렌더링 적용 (#6)
-#18 merged 2 days ago
+#18 merged 4 days ago
 
 Fix: 모바일 반응형 UI 디테일 수정
-#19 merged 2 days ago
+#19 merged 4 days ago
 
 오류 재수정
-#16 merged 2 days ago
+#16 merged 5 days ago
 
 오류 수정
-#15 merged 2 days ago
+#15 merged 5 days ago
 
 feat: '비밀의 방' JavaScript 인터랙션 추가
-#14 merged 2 days ago
+#14 merged 5 days ago
 
 [Feat] 오픈소스 AOS 라이브러리를 활용한 UI 동적 구현 #3
-#13 merged 2 days ago
+#13 merged 5 days ago
 
 [Fix] 프로젝트 설정 파일 누락 수정
-#9 merged 2 days ago
+#9 merged 5 days ago
 
 [Setting] 프로젝트 초기 구조 설정 #1
-#8 merged 2 days ago
+#8 merged 5 days ago
 
-10 issues closed by 1 person
+ 10 issues closed by 1 person
 GitHub Page 배포 및 최종 점검
-#7 closed 23 minutes ago
+#7 closed 3 days ago
 
 README.md 작성 (프로젝트 소개 및 기여 내역)
-#12 closed 33 minutes ago
+#12 closed 3 days ago
 
 유튜브 플레이어 모달(Modal) 기능 구현
-#11 closed 2 hours ago
+#11 closed 3 days ago
 
 탭 메뉴 인터랙션 JavaScript 구현
-#10 closed yesterday
+#10 closed 4 days ago
 
 공통 스타일 가이드 정립 및 CSS 분리
-#2 closed 2 days ago
+#2 closed 4 days ago
 
 앨범 커버 및 플레이리스트 데이터 JSON 분리
-#6 closed 2 days ago
+#6 closed 4 days ago
 
 모바일 반응형 UI 디테일 수정 (Media Query)
-#4 closed 2 days ago
+#4 closed 4 days ago
 
 '비밀의 방' 이스터에그 로직 고도화
-#5 closed 2 days ago
+#5 closed 5 days ago
 
 AOS 오픈소스 라이브러리 적용 가이드
-#3 closed 2 days ago
+#3 closed 5 days ago
 
 프로젝트 초기 설정 및 레포지토리 구조화
-#1 closed 2 days ago
+#1 closed 5 days ago
 
 ### 협업 및 이슈 해결 과정
 Pair Programming 도입: 프로젝트 막바지, 유튜브 API 연동 로직의 복잡성을 해결하고 충돌을 최소화하기 위해 팀장과 팀원이 한 컴퓨터에서 코드를 검토하며 함께 커밋하는 페어 프로그래밍(Pair Programming) 방식을 채택하여 개발 효율을 높였음.
